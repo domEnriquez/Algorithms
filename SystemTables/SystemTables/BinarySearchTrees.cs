@@ -12,12 +12,18 @@ namespace SystemTables
             public Node Left;
             public Node Right;
             public int Count;
+            public bool Color;
 
             public Node(Tkey key, TVal val)
             {
                 Key = key;
                 Val = val;
                 Count = 1;
+            }
+
+            public Node(Tkey key, TVal val, bool color) : this(key,val)
+            {
+                Color = color;
             }
         }
 
@@ -54,7 +60,7 @@ namespace SystemTables
             root = put(root, key, val);
         }
 
-        private Node put(Node node, Tkey key, TVal val)
+        protected virtual Node put(Node node, Tkey key, TVal val)
         {
             if (node == null)
                 return new Node(key, val);
@@ -72,8 +78,6 @@ namespace SystemTables
 
             return node;
         }
-
-
 
         public override string GetName()
         {
@@ -135,7 +139,7 @@ namespace SystemTables
                 return size(node.Left);
         }
 
-        private int size(Node node)
+        protected int size(Node node)
         {
             if (node == null)
                 return 0;

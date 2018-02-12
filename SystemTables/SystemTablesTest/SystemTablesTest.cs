@@ -14,7 +14,8 @@ namespace SystemTablesTest
         {
             tables = new List<SystemTable<int, string>>()
             {
-                 new OrderedArrayST<int, string>(), new BinarySearchTrees<int, string>(), new UnorderedLinkedListST<int, string>()
+                 new OrderedArrayST<int, string>(), new BinarySearchTrees<int, string>(), new UnorderedLinkedListST<int, string>(),
+                 new RedBlackBinarySearchTrees<int, string>()
             };
         }
 

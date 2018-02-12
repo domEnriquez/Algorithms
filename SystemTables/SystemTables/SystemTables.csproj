@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BinarySearchTrees.cs" />
     <Compile Include="OrderedArrayST.cs" />
+    <Compile Include="RedBlackBinarySearchTrees.cs" />
     <Compile Include="SystemTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnorderedLinkedListST.cs" />
