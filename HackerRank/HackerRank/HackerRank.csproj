@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppleAndOrange.cs" />
     <Compile Include="GradingStudents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
