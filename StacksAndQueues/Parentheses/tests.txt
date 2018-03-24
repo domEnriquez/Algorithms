@@ -1,0 +1,6 @@
+create Parentheses
+return false of string.empty
+return false if null
+one opening parenthesis only test
+opening parenthesis followed by a char test
+opening parentheis with closing parenthesis
