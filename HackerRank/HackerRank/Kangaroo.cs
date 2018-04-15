@@ -13,17 +13,31 @@ namespace HackerRank
         [Test]
         public void CanKangaroosMeet()
         {
-            Assert.AreEqual("YES", CanKangaroosMeet(0, 0, 0, 0), "1");
-            Assert.AreEqual("YES", CanKangaroosMeet(0, 1, 0, 1), "2");
-            Assert.AreEqual("NO", CanKangaroosMeet(0, 2, 0, 1), "3");
-            Assert.AreEqual("NO", CanKangaroosMeet(0, 1, 0, 2), "4");
-            Assert.AreEqual("NO", CanKangaroosMeet(0, 1, 1, 1), "5");
-            Assert.AreEqual("NO", CanKangaroosMeet(1, 1, 0, 1), "6");
-            Assert.AreEqual("YES", CanKangaroosMeet(1, 3, 2, 2), "7");
-            Assert.AreEqual("NO", CanKangaroosMeet(0, 2, 5, 3), "8");
-            Assert.AreEqual("YES", CanKangaroosMeet(0, 2, 5, 1), "9");
-            Assert.AreEqual("YES", CanKangaroosMeet(0, 3, 4, 2), "10");
-            Assert.AreEqual("NO", CanKangaroosMeet(8, 2, 4, 5), "11");
+            Assert.AreEqual("YES", CanKangaroosMeet2(0, 0, 0, 0), "1");
+            Assert.AreEqual("YES", CanKangaroosMeet2(0, 1, 0, 1), "2");
+            Assert.AreEqual("NO", CanKangaroosMeet2(0, 2, 0, 1), "3");
+            Assert.AreEqual("NO", CanKangaroosMeet2(0, 1, 0, 2), "4");
+            Assert.AreEqual("NO", CanKangaroosMeet2(0, 1, 1, 1), "5");
+            Assert.AreEqual("NO", CanKangaroosMeet2(1, 1, 0, 1), "6");
+            Assert.AreEqual("YES", CanKangaroosMeet2(1, 3, 2, 2), "7");
+            Assert.AreEqual("NO", CanKangaroosMeet2(0, 2, 5, 3), "8");
+            Assert.AreEqual("YES", CanKangaroosMeet2(0, 2, 5, 1), "9");
+            Assert.AreEqual("YES", CanKangaroosMeet2(0, 3, 4, 2), "10");
+            Assert.AreEqual("NO", CanKangaroosMeet2(8, 2, 4, 5), "11");
+        }
+
+        public string CanKangaroosMeet2(int x1, int v1, int x2, int v2)
+        {
+            if (x2 == x1 && v2 == v1)
+                return "YES";
+
+            if (v2 == v1)
+                return "NO";
+
+            if (((x2 - x1)/(v1-v2) > 0) && ((x2 - x1) % (v1 - v2) == 0))
+                return "YES";
+            else
+                return "NO";
         }
 
         public string CanKangaroosMeet(int x1, int v1, int x2, int v2)
