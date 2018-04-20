@@ -26,7 +26,7 @@ namespace HackerRank
 
         private void assertBetweenTwoSets(int[] a, int[] b, int[] expected)
         {
-            Assert.AreEqual(expected, getNumBetween(a, b));
+            Assert.AreEqual(expected, getNumBetween2(a, b));
         }
 
         private int[] getNumBetween(int[] a, int[] b)
@@ -45,6 +45,57 @@ namespace HackerRank
             }
 
             return nums.ToArray();
+        }
+
+        private int[] getNumBetween2(int[] a, int[] b)
+        {
+            List<int> nums = new List<int>();
+            int lcmA = getLcm(a);
+            int gcfB = getGcf(b);
+            int limit = getLeastNum(b);
+            int numA = lcmA;
+
+            while(numA <= gcfB)
+            {
+                if (gcfB % numA == 0)
+                    nums.Add(numA);
+
+                numA += lcmA;
+            }
+            nums.Count();
+            return nums.ToArray();
+        }
+
+        private int getGcf(int[] b)
+        {
+            if (b.Length == 1)
+                return b[0];
+
+            int gcf = euclidGcf(b[0], b[1]);
+
+            for(int i = 2; i < b.Length; i++)
+                gcf = euclidGcf(gcf, b[i]);
+
+            return gcf;
+        }
+
+        private int euclidGcf(int num1, int num2)
+        {
+            if(num1 < num2)
+            {
+                int temp = num1;
+                num1 = num2;
+                num2 = temp;
+            }
+
+            while(num2 != 0)
+            {
+                int temp = num2;
+                num2 = num1 % num2;
+                num1 = temp;
+            }
+
+            return num1;
         }
 
         private bool factorOfArrayElems(int numA, int[] b)
