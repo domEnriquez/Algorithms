@@ -18,9 +18,21 @@
     <ClInclude Include="BreakingTheRecords.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BirthdayChocolate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DivisibleSumPairs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BreakingTheRecords.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BirthdayChocolate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DivisibleSumPairs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

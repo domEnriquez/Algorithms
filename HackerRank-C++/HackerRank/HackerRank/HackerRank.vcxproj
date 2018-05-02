@@ -151,10 +151,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BirthdayChocolate.h" />
     <ClInclude Include="BreakingTheRecords.h" />
+    <ClInclude Include="DivisibleSumPairs.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BirthdayChocolate.cpp" />
     <ClCompile Include="BreakingTheRecords.cpp" />
+    <ClCompile Include="DivisibleSumPairs.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
