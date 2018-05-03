@@ -12,7 +12,7 @@ namespace GenericQueueTest
         [SetUp]
         public void GivenAListOfQueueTypes()
         {
-            queues = new List<AbstractQueue<int>>() { new LinkedQueue<int>(), new ResizingArrayQueue<int>() };
+            queues = new List<AbstractQueue<int>>() { /*new LinkedQueue<int>(), new ResizingArrayQueue<int>(),*/ new QueueViaTwoStacks<int>() };
         }
 
         [Test]
