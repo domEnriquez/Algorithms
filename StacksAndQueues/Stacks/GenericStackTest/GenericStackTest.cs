@@ -85,5 +85,30 @@ namespace GenericStackTest
             }
         }
 
+        [Test]
+        public void GivenEmptyStack_WhenGetMax_ThenThrowStackUnderflowException()
+        {
+            foreach(AbstractStack<int> stack in stacks)
+                Assert.Throws<AbstractStack<int>.StackUnderflowException>(() => stack.GetMax(), stack.GetStackType());
+        }
+
+        [Test]
+        public void GivenFilledStack_WhenGetMax_ThenReturnMaxElement()
+        {
+            foreach (AbstractStack<int> stack in stacks)
+            {
+                stack.Push(1);
+                Assert.AreEqual(1, stack.GetMax());
+                Assert.AreEqual(1, stack.Size());
+
+                stack.Push(2);
+                Assert.AreEqual(2, stack.GetMax());
+                Assert.AreEqual(2, stack.Size());
+
+                stack.Push(0);
+                Assert.AreEqual(2, stack.GetMax());
+                Assert.AreEqual(3, stack.Size());
+            }
+        }
     }
 }

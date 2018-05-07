@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenericStack
 {
-    public class LinkedStack<T> : AbstractStack<T>
+    public class LinkedStack<T> : AbstractStack<T> where T : IComparable
     {
         private Node first = null;
         private int size = 0;
@@ -64,6 +64,25 @@ namespace GenericStack
         public override string GetStackType()
         {
             return "LinkedStack";
+        }
+
+        public override T GetMax()
+        {
+            if (IsEmpty())
+                throw new StackUnderflowException();
+
+            Node node = first;
+            T max = node.item;
+
+            while(node != null)
+            {
+                if (node.item.CompareTo(max) > 0)
+                    max = node.item;
+
+                node = node.next;
+            }
+
+            return max;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenericStack
 {
-    public class ResizingArrayStack<T> : AbstractStack<T>
+    public class ResizingArrayStack<T> : AbstractStack<T> where T : IComparable
     {
         private T[] s;
         private int N = 0;
@@ -66,6 +66,20 @@ namespace GenericStack
         public override string GetStackType()
         {
             return "ResizingArrayStack";
+        }
+
+        public override T GetMax()
+        {
+            if (IsEmpty())
+                throw new StackUnderflowException();
+
+            T max = s[0];
+
+            for (int i = 0; i < N; i++)
+                if (s[i].CompareTo(max) > 0)
+                    max = s[i];
+
+            return max;
         }
     }
 }
