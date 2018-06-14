@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeSum", "ThreeSum\ThreeSum.csproj", "{ECEFC6B9-A8A4-426D-822B-0C04947B248A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeSumTest", "ThreeSumTest\ThreeSumTest.csproj", "{C1B4E323-BE94-44BF-BA58-673E89F712B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "..\BinarySearch\BinarySearch\BinarySearch.csproj", "{AB305234-407E-4EA4-AB0E-070EC6E0E49C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECEFC6B9-A8A4-426D-822B-0C04947B248A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECEFC6B9-A8A4-426D-822B-0C04947B248A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECEFC6B9-A8A4-426D-822B-0C04947B248A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECEFC6B9-A8A4-426D-822B-0C04947B248A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1B4E323-BE94-44BF-BA58-673E89F712B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B4E323-BE94-44BF-BA58-673E89F712B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B4E323-BE94-44BF-BA58-673E89F712B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B4E323-BE94-44BF-BA58-673E89F712B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB305234-407E-4EA4-AB0E-070EC6E0E49C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB305234-407E-4EA4-AB0E-070EC6E0E49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB305234-407E-4EA4-AB0E-070EC6E0E49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB305234-407E-4EA4-AB0E-070EC6E0E49C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
