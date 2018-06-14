@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementarySorts", "ElementarySorts\ElementarySorts.csproj", "{C2BFA7C5-EA0C-44A9-9194-84E7164914C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementarySortsTest", "ElementarySortsTest\ElementarySortsTest.csproj", "{2D554F71-9241-4DBA-B0E4-339C06A618CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortsTiming", "SortsTiming\SortsTiming.csproj", "{6B09847E-8401-4BD8-BD06-B97C1772C7C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2BFA7C5-EA0C-44A9-9194-84E7164914C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2BFA7C5-EA0C-44A9-9194-84E7164914C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2BFA7C5-EA0C-44A9-9194-84E7164914C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2BFA7C5-EA0C-44A9-9194-84E7164914C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D554F71-9241-4DBA-B0E4-339C06A618CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D554F71-9241-4DBA-B0E4-339C06A618CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D554F71-9241-4DBA-B0E4-339C06A618CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D554F71-9241-4DBA-B0E4-339C06A618CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B09847E-8401-4BD8-BD06-B97C1772C7C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B09847E-8401-4BD8-BD06-B97C1772C7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B09847E-8401-4BD8-BD06-B97C1772C7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B09847E-8401-4BD8-BD06-B97C1772C7C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
