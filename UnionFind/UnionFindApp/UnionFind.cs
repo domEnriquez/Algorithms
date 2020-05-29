@@ -2,10 +2,10 @@
 
 namespace UnionFindApp
 {
-    public class UnionFind
+    public abstract class UnionFind
     {
-        int[] numbers;
-        int limit;
+        protected int[] numbers;
+        protected int limit;
 
         public UnionFind(int limit)
         {
@@ -16,29 +16,9 @@ namespace UnionFindApp
                 numbers[i] = i;
         }
 
-        public void Union(int num1, int num2)
-        {
-            if (num1 > limit || num2 > limit)
-                throw new NumberExceedsLimitException();
+        public abstract void Union(int num1, int num2);
 
-            int oldNum1Id = numbers[num1];
-            numbers[num1] = numbers[num2];
-
-            for(int i = 0; i < limit; i++)
-                if (numbers[i] == oldNum1Id)
-                    numbers[i] = numbers[num2];
-        }
-
-        public bool Connected(int num1, int num2)
-        {
-            if (num1 > limit || num2 > limit)
-                throw new NumberExceedsLimitException();
-
-            if (num1 == num2 || numbers[num1] == numbers[num2])
-                return true;
-            else
-                return false;
-        }
+        public abstract bool Connected(int num1, int num2);
 
         public class NumberExceedsLimitException : Exception
         {

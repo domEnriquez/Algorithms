@@ -6,12 +6,12 @@ namespace UnionFindTest
     [TestFixture]
     public class UnionFindTest
     {
-        UnionFind uf;
+        UnionFind qf;
 
         [SetUp]
         public void SetUp()
         {
-            uf = new UnionFind(10);
+            qf = new QuickFind(10);
         }
 
         [Test]
@@ -29,22 +29,22 @@ namespace UnionFindTest
         [Test]
         public void GivenInputExceedsLimit_WhenUnion_ThenThrowNumberExceedsLimitException()
         {
-            Assert.Throws<UnionFind.NumberExceedsLimitException>(() => uf.Union(11, 0));
-            Assert.Throws<UnionFind.NumberExceedsLimitException>(() => uf.Union(0, 11));
+            Assert.Throws<UnionFind.NumberExceedsLimitException>(() => qf.Union(11, 0));
+            Assert.Throws<UnionFind.NumberExceedsLimitException>(() => qf.Union(0, 11));
         }
 
         [Test]
         public void GivenInputExceedsLimit_WhenConnected_ThenThrowNumberExceedsLimitException()
         {
-            Assert.Throws<UnionFind.NumberExceedsLimitException>(() => uf.Connected(11, 0));
-            Assert.Throws<UnionFind.NumberExceedsLimitException>(() => uf.Connected(0, 11));
+            Assert.Throws<UnionFind.NumberExceedsLimitException>(() => qf.Connected(11, 0));
+            Assert.Throws<UnionFind.NumberExceedsLimitException>(() => qf.Connected(0, 11));
         }
 
         [Test]
         public void WhenUnionTwoDifferentNumbers_ThenTheyAreConnected()
         {
-            uf.Union(0, 1);
-            uf.Union(2, 3);
+            qf.Union(0, 1);
+            qf.Union(2, 3);
 
             assertIsConnected(0, 1);
             assertIsConnected(2, 3);
@@ -54,8 +54,8 @@ namespace UnionFindTest
         [Test]
         public void UnionTransitivity()
         {
-            uf.Union(0, 1);
-            uf.Union(0, 2);
+            qf.Union(0, 1);
+            qf.Union(0, 2);
 
             assertIsConnected(1, 2);
         }
@@ -63,18 +63,18 @@ namespace UnionFindTest
         [Test]
         public void IntegrationTest()
         {
-            uf.Union(4, 3);
-            uf.Union(3, 8);
-            uf.Union(6, 5);
-            uf.Union(9, 4);
-            uf.Union(2, 1);
+            qf.Union(4, 3);
+            qf.Union(3, 8);
+            qf.Union(6, 5);
+            qf.Union(9, 4);
+            qf.Union(2, 1);
 
             assertIsConnected(8, 9);
             assertNotConnected(0, 5);
 
-            uf.Union(0, 5);
-            uf.Union(2, 7);
-            uf.Union(6, 1);
+            qf.Union(0, 5);
+            qf.Union(2, 7);
+            qf.Union(6, 1);
 
             assertIsConnected(0, 5);
             assertIsConnected(3, 4);
@@ -83,12 +83,12 @@ namespace UnionFindTest
 
         private void assertIsConnected(int num1, int num2)
         {
-            Assert.IsTrue(uf.Connected(num1, num2));
+            Assert.IsTrue(qf.Connected(num1, num2));
         }
 
         private void assertNotConnected(int num1, int num2)
         {
-            Assert.IsFalse(uf.Connected(num1, num2));
+            Assert.IsFalse(qf.Connected(num1, num2));
         }
 
     }
