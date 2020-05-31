@@ -9,8 +9,7 @@
 
         public override void Union(int num1, int num2)
         {
-            if (num1 > limit || num2 > limit)
-                throw new NumberExceedsLimitException();
+            validateInput(num1, num2);
 
             int oldNum1Id = numbers[num1];
             numbers[num1] = numbers[num2];
@@ -22,8 +21,7 @@
 
         public override bool Connected(int num1, int num2)
         {
-            if (num1 > limit || num2 > limit)
-                throw new NumberExceedsLimitException();
+            validateInput(num1, num2);
 
             if (num1 == num2 || numbers[num1] == numbers[num2])
                 return true;

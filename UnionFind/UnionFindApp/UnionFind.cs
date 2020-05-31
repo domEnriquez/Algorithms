@@ -20,6 +20,12 @@ namespace UnionFindApp
 
         public abstract bool Connected(int num1, int num2);
 
+        protected void validateInput(int num1, int num2)
+        {
+            if (num1 > limit || num2 > limit)
+                throw new NumberExceedsLimitException();
+        }
+
         public class NumberExceedsLimitException : Exception
         {
 

@@ -8,8 +8,7 @@
 
         public override bool Connected(int num1, int num2)
         {
-            if (num1 > limit || num2 > limit)
-                throw new NumberExceedsLimitException();
+            validateInput(num1, num2);
 
             if (num1 == num2)
                 return true;
@@ -24,8 +23,7 @@
 
         public override void Union(int num1, int num2)
         {
-            if (num1 > limit || num2 > limit)
-                throw new NumberExceedsLimitException();
+            validateInput(num1, num2);
 
             numbers[root(num1)] = root(num2);
         }
