@@ -11,7 +11,7 @@ namespace UnionFindTest
         [SetUp]
         public void SetUp()
         {
-            qf = new QuickFind(10);
+            qf = new QuickUnion(10);
         }
 
         [Test]
@@ -70,6 +70,7 @@ namespace UnionFindTest
             qf.Union(2, 1);
 
             assertIsConnected(8, 9);
+            assertIsConnected(9, 3);
             assertNotConnected(0, 5);
 
             qf.Union(0, 5);
