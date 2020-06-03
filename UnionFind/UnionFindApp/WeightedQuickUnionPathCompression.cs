@@ -1,10 +1,10 @@
 ﻿namespace UnionFindApp
 {
-    public class WeightedQuickUnion : UnionFind
+    public class WeightedQuickUnionPathCompression : UnionFind
     {
         private int[] size;
 
-        public WeightedQuickUnion(int limit) : base(limit)
+        public WeightedQuickUnionPathCompression(int limit) : base(limit)
         {
             size = new int[limit];
         }
@@ -49,7 +49,11 @@
         private int root(int num1)
         {
             while (numbers[num1] != num1)
+            {
+                numbers[num1] = numbers[numbers[num1]];
                 num1 = numbers[num1];
+            }
+
 
             return num1;
         }

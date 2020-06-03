@@ -11,7 +11,7 @@ namespace UnionFindTest
         [SetUp]
         public void SetUp()
         {
-            qf = new WeightedQuickUnion(10);
+            qf = new WeightedQuickUnionPathCompression(10);
         }
 
         [Test]

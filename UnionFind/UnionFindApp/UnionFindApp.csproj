@@ -45,7 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuickUnion.cs" />
     <Compile Include="UnionFind.cs" />
-    <Compile Include="WeightedQuickUnion.cs" />
+    <Compile Include="WeightedQuickUnionPathCompression.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
