@@ -66,20 +66,28 @@ namespace UnionFindTest
             qf.Union(4, 3);
             qf.Union(3, 8);
             qf.Union(6, 5);
+
+            assertIsConnected(4, 8);
+            assertNotConnected(6, 3);
+
             qf.Union(9, 4);
             qf.Union(2, 1);
 
             assertIsConnected(8, 9);
-            assertIsConnected(9, 3);
-            assertNotConnected(0, 5);
+            assertNotConnected(5, 4);
 
-            qf.Union(0, 5);
-            qf.Union(2, 7);
+            qf.Union(5, 0);
+            qf.Union(7, 2);
+
+            assertIsConnected(7, 1);
+            assertNotConnected(7, 0);
+
             qf.Union(6, 1);
+            qf.Union(7, 3);
 
-            assertIsConnected(0, 5);
-            assertIsConnected(3, 4);
-            assertNotConnected(4, 5);
+            assertIsConnected(7, 0);
+            assertIsConnected(4, 5);
+            assertIsConnected(6, 3);
         }
 
         private void assertIsConnected(int num1, int num2)
