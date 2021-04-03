@@ -51,6 +51,7 @@
     <Compile Include="BetweenTwoSets.cs" />
     <Compile Include="GradingStudents.cs" />
     <Compile Include="Kangaroo.cs" />
+    <Compile Include="MinimumSwaps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepeatedString.cs" />
     <Compile Include="TwoDArray.cs" />
