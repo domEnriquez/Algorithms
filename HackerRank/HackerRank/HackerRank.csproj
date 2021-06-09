@@ -46,14 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcmIcpcTeam.cs" />
     <Compile Include="AppleAndOrange.cs" />
     <Compile Include="ArrayLeftRotation.cs" />
+    <Compile Include="BeautifulTriplets.cs" />
     <Compile Include="BetweenTwoSets.cs" />
+    <Compile Include="CavityMap.cs" />
+    <Compile Include="ChocolateFeast.cs" />
+    <Compile Include="EqualizeArray.cs" />
+    <Compile Include="FairRations.cs" />
+    <Compile Include="FlatLandSpaceStations.cs" />
     <Compile Include="GradingStudents.cs" />
+    <Compile Include="HalloweenSale.cs" />
+    <Compile Include="HappyLadyBug.cs" />
     <Compile Include="Kangaroo.cs" />
+    <Compile Include="LibraryFine.cs" />
+    <Compile Include="ManasaAndStones.cs" />
+    <Compile Include="MinimumDistances.cs" />
     <Compile Include="MinimumSwaps.cs" />
+    <Compile Include="NewYearChaos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepeatedString.cs" />
+    <Compile Include="SherlockAndSquares.cs" />
     <Compile Include="TwoDArray.cs" />
   </ItemGroup>
   <ItemGroup>
