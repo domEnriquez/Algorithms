@@ -27,8 +27,6 @@ namespace CrackingCodeInterview
             if (string.IsNullOrEmpty(s))
                 return false;
 
-            bool even = s.Length % 2 == 0 ? true : false;
-
             Dictionary<char, int> charFreqDict = new Dictionary<char, int>();
 
             for(int i = 0; i < s.Length; i++)
